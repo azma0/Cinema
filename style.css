@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  background-color: whitesmoke;
+}
+header {
+  background: #2e2d2d;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: white;
+}
+.controls input,
+.controls select,
+.controls button {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+.controls button {
+  background: #2e2d2d;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+.movie-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.movie-card img {
+  width: 40%;
+  height: auto;
+  object-fit: cover;
+}
+.movie-card h3 {
+  margin: 0.5rem 0;
+}
+.movie-card p {
+  margin: 0 0 1rem;
+  color: #565555;
+}

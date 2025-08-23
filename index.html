@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinema</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>Cinema Movies</header>
+
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Search movies..." />
+      <select id="filterCategorySelect">
+        <option value="">Filter by</option>
+        <option value="action">Action</option>
+        <option value="comedy">Comedy</option>
+        <option value="drama">Drama</option>
+      </select>
+      <select id="sortSelect">
+        <option value="">Sort by</option>
+        <option value="time">Time</option>
+        <option value="name">Name</option>
+      </select>
+      <button id="resetFilters">Reset Filters</button>
+    </div>
+
+    <div class="movies" id="moviesContainer"></div>
+  </body>
+  <script type="module" src="cinema.js" defer></script>
+</html>
