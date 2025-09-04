@@ -58,6 +58,7 @@ describe("Search Movies", () => {
   it("should return all movies if query is empty", () => {
     const result = searchMovies(movies, "");
     expect(result.length).toBe(movies.length);
+    // check whether the results array and movies array have the same items in unmodified order
   });
 });
 
@@ -148,6 +149,13 @@ describe("Apply Filters and Sort", () => {
 
   it("should return all movies if no search query, no filters or sort applied", () => {
     const result = applyFiltersAndSort(movies, "", "", "");
-    expect(result.length).toBe(movies.length);
+    expect(Object.keys(result)).toEqual(Object.keys(movies));
+  });
+
+  it("should have ['name', 'category', 'time', 'image'] attributes", () => {
+    const result = applyFiltersAndSort(movies, "", "", "");
+    result.forEach((movie) => {
+      expect(Object.keys(movie)).toEqual(["name", "category", "time", "image"]);
+    });
   });
 });
